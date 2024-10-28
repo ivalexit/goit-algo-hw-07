@@ -37,7 +37,7 @@ def insert(root, key):
     return root
 
 def get_height(node):
-    if not not node:
+    if not node:
         return 0
     return node.height
 
@@ -76,8 +76,10 @@ def find_max_value(root):
         current = current.right #replace 'current' with its right descendent
     return current.key if current else None #return key value as the biggest or None if tree is empty
 
-root = 50
+root = None
 keys = [5, 40, 15, 79, 46, 28, 95, 37, 17, 50, 68, 43, 86, 31, 83]
 
+for key in keys:
+    root = insert(root, key)
 
 print("Max value in the AVL-tree is:", find_max_value(root))
